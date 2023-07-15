@@ -1,0 +1,14 @@
+---
+ - name: Playbook to install MYSQL
+   hosts: test
+   become: true
+   tasks: 
+    - name: Ansible apt install mysql
+      apt:
+        name: mysql-server
+        state: present
+    - name: Start Mysql
+      service:
+        name: mysql
+        state: started
+        enabled: yes

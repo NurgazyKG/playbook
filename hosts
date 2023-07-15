@@ -1,0 +1,8 @@
+[test]
+node01 ansible_ssh_host=IP
+
+[test:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_user=root
+ansible_password=pass
+
