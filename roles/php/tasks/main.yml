@@ -1,0 +1,13 @@
+---
+# tasks file for php
+ - name: php-fpm install
+   apt:
+     name: php8.1-fpm 
+ - name: set php config
+   copy:
+     src: /etc/ansible/playbook/playbook/roles/php/files/www.conf
+     dest: /etc/php/8.1/fpm/pool.d/www.conf
+ - name: restart service
+   ansible.builtin.service:
+     name: php8.1-fpm
+     state: restarted
