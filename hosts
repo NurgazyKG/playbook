@@ -1,8 +1,8 @@
 [test]
-node01 ansible_ssh_host=IP
+node01 ansible_ssh_host=192.168.137.200
 
 [test:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_user=root
-ansible_password=pass
+ansible_password=skillfactoy
 
